@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="16" time="285.595">
+<testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="30.442">
+<failure message="Cannot locate option with index: 13&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.1', revision: 'c6795baf1a3'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_362'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................failed
+And user enter email "test@example.com" field...............................skipped
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................skipped
+And user clicks on register button..........................................skipped
+Then success message is displayed...........................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 13
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_362'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:305)
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:179)
+	at org.example.stepDefs.D01_registerStepDef.enterDateOfBirth(D01_registerStepDef.java:39)
+	at ✽.user enter date of birth(file:///F:/Desktop/sw%20testing/Java/demonopcommerce/src/main/resources/features/F01_Register.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="F01_Register | users could register with new accounts" name="guest user could not register with existing email" time="19.135">
+<system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter existing email "test@example.com" field......................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+And user clicks on register button..........................................passed
+Then existing email massage is displayed....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="16.633">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "valid" "test@example.com" and "P@ssw0rd"..............passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="14.711">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "invalid" "wrong@example.com" and "P@ssw0rd"...........passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_currencies | users could choose currency" name="user could choose Euro currency" time="14.284">
+<system-out><![CDATA[When user select Euro currency from the dropdown list.......................passed
+Then user show products with Euro Symbol displayed in Home page.............passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | users could search for a product" name="user could search using product name" time="16.15">
+<failure message="The following asserts failed:&#10;&#9;expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When user enter in search field product name "book".........................passed
+And user click on search button.............................................passed
+Then products with "book" search keyword are shown..........................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at org.example.stepDefs.D04_searchStepDef.verifyProductTitleWithProName(D04_searchStepDef.java:37)
+	at ✽.products with "book" search keyword are shown(file:///F:/Desktop/sw%20testing/Java/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="F04_Search | users could search for a product" name="user could search using product name 2" time="16.845">
+<system-out><![CDATA[When user enter in search field product name "laptop".......................passed
+And user click on search button.............................................passed
+Then products with "laptop" search keyword are shown........................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | users could search for a product" name="user could search using product name 3" time="15.599">
+<system-out><![CDATA[When user enter in search field product name "nike".........................passed
+And user click on search button.............................................passed
+Then products with "nike" search keyword are shown..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | users could search for a product" name="user could search for product using sku" time="18.698">
+<system-out><![CDATA[When user enter in search field product sku "SCI_FAITH".....................passed
+And user click on search button.............................................passed
+Then products with "SCI_FAITH" sku are shown................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | users could search for a product" name="user could search for product using sku 2" time="19.654">
+<system-out><![CDATA[When user enter in search field product sku "APPLE_CAM".....................passed
+And user click on search button.............................................passed
+Then products with "APPLE_CAM" sku are shown................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | users could search for a product" name="user could search for product using sku 3" time="18.979">
+<system-out><![CDATA[When user enter in search field product sku "SF_PRO_11".....................passed
+And user click on search button.............................................passed
+Then products with "SF_PRO_11" sku are shown................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_hoverCategories | users could hover on category" name="user could hover on one of 3 main categories contains sub-categories" time="14.975">
+<system-out><![CDATA[When user hover on random one of the three main categories..................passed
+And user select random one of the three sub categories......................passed
+Then user show the selected sub category page...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_hoverCategories | users could hover on category" name="user could hover on one of main categories" time="14.887">
+<system-out><![CDATA[When user hover on any random category whether it contains sub category or not.passed
+And user select either random one of sub categories or one of the main categories that not contains sub category.passed
+Then user show the selected sub category page...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_Logout | users could use logout functionality" name="user could logout from the system" time="15.271">
+<system-out><![CDATA[Given user is logged in.....................................................passed
+When user click on logout icon..............................................passed
+Then user logout from the system successfully...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_ContactUs | users could use contact us functionality" name="user could sent his enquiry successfully" time="21.123">
+<system-out><![CDATA[When user click on 'Contact us' link........................................passed
+And user enter his name in 'Your name' field................................passed
+And user enter his email in 'Your email' field..............................passed
+And user enter his enquiry in 'enquiry' field...............................passed
+And user click 'Submit' button..............................................passed
+Then user enquiry has been successfully sent................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_AddToCart | users could add products to card" name="user could could add products to card successfully" time="17.147">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[Given user go to one of categories page.....................................passed
+When user click on 'ADD TO CART' button of the first product................passed
+And user click on 'ADD TO CART' button of the second product................passed
+And user click on 'ADD TO CART' button of the second product again..........passed
+And user navigate to shopping cart..........................................passed
+Then products added to the shopping cart....................................failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefs.D08_addToCartStepDef.succAddToCart(D08_addToCartStepDef.java:75)
+	at ✽.products added to the shopping cart(file:///F:/Desktop/sw%20testing/Java/demonopcommerce/src/main/resources/features/F08_AddToCart.feature:9)
+]]></failure>
+</testcase>
+</testsuite>

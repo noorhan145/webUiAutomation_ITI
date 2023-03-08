@@ -1,0 +1,208 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Feb 22 00:31:06 EET 2023</td>
+</tr>
+<tr><td>Total time:</td><td>286 seconds (286793 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could could add products to card successfully", "Optional[F08_AddToCart | users could add products to card]"</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefs.D08_addToCartStepDef.succAddToCart(D08_addToCartStepDef.java:75)
+	at ?.products added to the shopping cart(file:///F:/Desktop/sw%20testing/Java/demonopcommerce/src/main/resources/features/F08_AddToCart.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace947069810", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace947069810'><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefs.D08_addToCartStepDef.succAddToCart(D08_addToCartStepDef.java:75)
+	at ?.products added to the shopping cart(file:///F:/Desktop/sw%20testing/Java/demonopcommerce/src/main/resources/features/F08_AddToCart.feature:9)
+</pre></div></td>
+<td>17</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "guest user could register with valid data successfully", "Optional[F01_Register | users could register with new accounts]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 13
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_362&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:305)
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:179)
+	at org.example.stepDefs.D01_registerStepDef.enterDateOfBirth(D01_registerStepDef.java:39)
+	at ?.user enter date of birth(file:///F:/Desktop/sw%20testing/Java/demonopcommerce/src/main/resources/features/F01_Register.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1697298649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1697298649'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 13
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_362&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:305)
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:179)
+	at org.example.stepDefs.D01_registerStepDef.enterDateOfBirth(D01_registerStepDef.java:39)
+	at ?.user enter date of birth(file:///F:/Desktop/sw%20testing/Java/demonopcommerce/src/main/resources/features/F01_Register.feature:8)
+</pre></div></td>
+<td>30</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name", "Optional[F04_Search | users could search for a product]"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.example.stepDefs.D04_searchStepDef.verifyProductTitleWithProName(D04_searchStepDef.java:37)
+	at ?.products with &quot;book&quot; search keyword are shown(file:///F:/Desktop/sw%20testing/Java/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace200760156", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace200760156'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at org.example.stepDefs.D04_searchStepDef.verifyProductTitleWithProName(D04_searchStepDef.java:37)
+	at ?.products with &quot;book&quot; search keyword are shown(file:///F:/Desktop/sw%20testing/Java/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+</pre></div></td>
+<td>16</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with invalid email and password", "Optional[F02_Login | users could use login functionality to use their accounts]"</td>
+<td></td>
+<td>14</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search for product using sku", "Optional[F04_Search | users could search for a product]"</td>
+<td></td>
+<td>18</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could hover on one of main categories", "Optional[F03_hoverCategories | users could hover on category]"</td>
+<td></td>
+<td>14</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search for product using sku", "Optional[F04_Search | users could search for a product]"</td>
+<td></td>
+<td>19</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could logout from the system", "Optional[F06_Logout | users could use logout functionality]"</td>
+<td></td>
+<td>15</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could sent his enquiry successfully", "Optional[F07_ContactUs | users could use contact us functionality]"</td>
+<td></td>
+<td>21</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "guest user could not register with existing email", "Optional[F01_Register | users could register with new accounts]"</td>
+<td></td>
+<td>19</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name", "Optional[F04_Search | users could search for a product]"</td>
+<td></td>
+<td>15</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with valid email and password", "Optional[F02_Login | users could use login functionality to use their accounts]"</td>
+<td></td>
+<td>16</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search for product using sku", "Optional[F04_Search | users could search for a product]"</td>
+<td></td>
+<td>19</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could hover on one of 3 main categories contains sub-categories", "Optional[F03_hoverCategories | users could hover on category]"</td>
+<td></td>
+<td>15</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could choose Euro currency", "Optional[F03_currencies | users could choose currency]"</td>
+<td></td>
+<td>14</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name", "Optional[F04_Search | users could search for a product]"</td>
+<td></td>
+<td>16</td>
+<td>org.example.testRunner.runners@42f93a98</td></tr>
+</table><p>
+</body>
+</html>

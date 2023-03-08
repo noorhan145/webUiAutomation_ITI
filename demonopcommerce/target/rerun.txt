@@ -1,0 +1,3 @@
+file:src/main/resources/features/F01_Register.feature:4
+file:src/main/resources/features/F08_AddToCart.feature:3
+file:src/main/resources/features/F04_Search.feature:9

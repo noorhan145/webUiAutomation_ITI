@@ -1,0 +1,15 @@
+org\example\pages\P04_contactUs.class
+org\example\pages\P05_shoppingCart.class
+org\example\stepDefs\D04_searchStepDef.class
+org\example\stepDefs\Hooks.class
+org\example\pages\P02_login.class
+org\example\pages\P03_homePage.class
+org\example\stepDefs\D01_registerStepDef.class
+org\example\stepDefs\D07_contactUsStepDef.class
+org\example\stepDefs\D03_currenciesStepDef.class
+org\example\stepDefs\D06_logoutStepDef.class
+org\example\pages\P01_register.class
+org\example\testRunner\runners.class
+org\example\stepDefs\D08_addToCartStepDef.class
+org\example\stepDefs\D05_hoverCategoriesStepDef.class
+org\example\stepDefs\D02_loginStepDef.class
